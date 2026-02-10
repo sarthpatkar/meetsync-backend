@@ -16,7 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:3000",
-                                "http://172.26.253.12:3000"  // ✅ allow frontend via LAN IP
+                                "http://172.26.253.12:3000",
+                                "https://meetsync-frontend.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
