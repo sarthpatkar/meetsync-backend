@@ -9,7 +9,7 @@ import java.util.*;
 @Service
 public class AIService {
 
-    @Value("${GOOGLE_API_KEY}")
+    @Value("${google.api.key}")
     private String apiKey;
 
     private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
