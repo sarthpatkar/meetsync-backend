@@ -30,7 +30,8 @@ public class SecurityConfig {
 
             .authorizeHttpRequests(auth -> auth
                 // ✅ Public endpoints
-                .requestMatchers("/api/auth/login", "/api/users/register").permitAll()
+                .requestMatchers("/api/auth/**", "/api/users/register").permitAll()
+                .requestMatchers("/api/ai/**").permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
                 // ✅ Meetings
